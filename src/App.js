@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
+import TinderCards from "./TinderCards";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCtkkGHPy_QZAVwaNj-fAEWNBXsRvEUxu8",
@@ -16,15 +18,22 @@ const firebaseConfig = {
 function App() {
   return (
     <div className="App">
-      <h1>Tinder-clone</h1>
-
-      {/* Header */}
       <Header />
-      {/* Tinder Cards */}
-      {/* Footer */}
+      <Router>
+        <Switch>
+          <Route path="/chat">
+            <h1>Chat Page</h1>
+          </Route>
+          <Route path="/">
+            <TinderCards />
+          </Route>
+        </Switch>
+        {/* Tinder Cards */}
+        {/* Footer */}
 
-      {/* Chat Screen */}
-      {/* Individual Chat Screen */}
+        {/* Chat Screen */}
+        {/* Individual Chat Screen */}
+      </Router>
     </div>
   );
 }
