@@ -12,10 +12,19 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/chat/:person">
+          <Route
+            path="/chat/:person"
+            render={(props) => (
+              <div>
+                <Header backButton="/chat" />
+                <ChatScreen {...props} />
+              </div>
+            )}
+          />
+          {/* <Route path="/chat/:person">
             <Header backButton="/chat" />
             <ChatScreen />
-          </Route>
+          </Route> */}
           <Route path="/chat">
             <Header backButton="/" />
             <Chats />
