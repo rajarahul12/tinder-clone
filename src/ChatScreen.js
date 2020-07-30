@@ -27,7 +27,7 @@ function ChatScreen(props) {
     <div className="chatScreen">
       <p className="chatScreen__timestamp">
         YOU MATCHED WITH {props.match.params.person.toUpperCase()} ON{" "}
-        {props.match.params.person == "Katherine" ? "10/8/20" : "22/6/20"}
+        {props.match.params.person === "Katherine" ? "10/8/20" : "22/6/20"}
       </p>
       <div className="chatScreen__messages">
         {messages.map((message) =>
