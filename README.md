@@ -8,9 +8,7 @@ Live Demo - [Click here](https://tinder-reactclone.web.app/)
 
 ## Video
 
-<video width="400" controls autoplay>
-  <source src="./video/tinder.mp4" type="video/mp4">
-</video>
+<img src="./video/tinder.gif" alt="Demo">
 
 ## To run locally
 
